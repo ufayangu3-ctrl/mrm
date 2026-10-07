@@ -55,7 +55,7 @@ if(calc){const v=id=>Number.parseFloat(document.querySelector("#"+id).value);cal
         <div class="cart-head"><div><p class="eyebrow">Your order</p><h2 id="cart-title">Shopping Cart</h2></div><button class="icon-button" type="button" data-cart-close aria-label="Close shopping cart">×</button></div>
         <div class="cart-body">
           <div class="cart-items" data-cart-items><p class="empty-cart">Your cart is empty. Add products to begin.</p></div>
-          <div class="cart-summary"><span>Subtotal</span><strong data-cart-subtotal>KSh 0.00</strong></div>
+          <div class="cart-summary"><span>Subtotal</span><strong data-cart-subtotal>KSh 0.00</strong></div><div class="cart-summary cart-total"><span>Total</span><strong data-cart-total>KSh 0.00</strong></div>
           <p class="cart-note">Prices shown are catalogue listings and may change. Please confirm current price, availability, colour and purchasing details with MRM before making payment or collection arrangements.</p>
           <section class="checkout-section" aria-labelledby="checkout-title"><h3 id="checkout-title">Customer details</h3><p>Only the minimum details needed to prepare the WhatsApp order are requested.</p>
             <div class="checkout-grid">
@@ -72,9 +72,9 @@ if(calc){const v=id=>Number.parseFloat(document.querySelector("#"+id).value);cal
 
   function render(){
     document.querySelectorAll("[data-cart-count]").forEach(x=>x.textContent=count());
-    const list=document.querySelector("[data-cart-items]"), total=document.querySelector("[data-cart-subtotal]");
+    const list=document.querySelector("[data-cart-items]"), total=document.querySelector("[data-cart-subtotal]"), grand=document.querySelector("[data-cart-total]");
     if(!list||!total)return;
-    total.textContent=money(subtotal());
+    total.textContent=money(subtotal());if(grand)grand.textContent=money(subtotal());
     if(!cart.length){list.innerHTML='<p class="empty-cart">Your cart is empty. Add products to begin.</p>';return;}
     list.innerHTML=cart.map((x,i)=>`<article class="cart-item">
       <div class="cart-item-main"><h3>${esc(x.name)}</h3><p>Gauge ${esc(x.gauge)} · ${esc(x.length)}${x.colour&&x.colour!=="Not specified"?" · "+esc(x.colour):""}</p><strong>${money(x.price)}</strong></div>
