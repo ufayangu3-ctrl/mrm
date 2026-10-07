@@ -41,3 +41,51 @@
 /* Requested mobile benefits strip */
 .benefit-icon{display:grid;place-items:center;width:44px;height:44px;flex:0 0 44px;border:2px solid #0b4b95;border-radius:50%;color:#0b4b95;font-size:1.35rem;font-weight:800}.benefit-card small{display:block;margin-top:3px;color:#435a78;font-size:.8rem;font-weight:600;line-height:1.2}.benefit-card strong{display:block;color:#0b4b95;font-size:.88rem;line-height:1.15}
 @media(max-width:780px){.benefits{background:#f7f9fc;padding:18px 0 22px}.benefit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;padding:0;background:#fff;border-radius:24px;box-shadow:0 8px 24px rgba(17,45,78,.10);overflow:hidden}.benefit-card{display:flex;align-items:center;gap:9px;min-height:94px;padding:16px 12px;border:0;border-radius:0;box-shadow:none;background:#fff}.benefit-card+.benefit-card{border-top:0;border-left:1px solid #dfe5ec}.benefit-card:nth-child(3){border-left:0;border-top:1px solid #dfe5ec}.benefit-icon{width:38px;height:38px;flex-basis:38px;font-size:1.05rem}.benefit-card strong{font-size:.76rem}.benefit-card small{font-size:.68rem}.benefit-dot{display:none}}
+
+/* Homepage visual polish */
+.site-header{box-shadow:0 4px 20px rgba(6,42,77,.06)}
+.hero{min-height:650px}
+.hero-image{background-image:linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.82) 34%,rgba(255,255,255,.24) 76%,rgba(255,255,255,.08) 100%),url("https://i.postimg.cc/RC8DfPhP/Screenshot-2026-10-06-114058.png");transform:scale(1.01)}
+.hero-content{max-width:730px}
+.hero h1{font-weight:900;color:#082f63}
+.hero h1 span{color:#0875d1}
+.hero-copy{font-size:1.16rem;line-height:1.7}
+.hero-actions .button{min-height:52px;box-shadow:0 10px 24px rgba(8,48,91,.12)}
+.hero-actions .button-call{background:#10a857;color:#fff}
+.benefits{margin-top:-42px}
+.benefit-card{min-height:92px;padding:20px;border-radius:16px}
+.products-showcase{position:relative;overflow:hidden}
+.products-showcase:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,rgba(11,117,209,.09),transparent 34%);pointer-events:none}
+.products-showcase>.container{position:relative}
+.products-showcase .section-heading{align-items:end}
+.products-showcase .section-lead{max-width:650px;margin:0}
+.product-slide{transition:transform .22s ease,box-shadow .22s ease}
+.product-slide:hover{transform:translateY(-6px);box-shadow:0 18px 38px rgba(23,32,51,.13)}
+.product-slide img{background:#f8fbfe}
+.product-slide span{color:#123a67}
+.calculator-section{background:linear-gradient(135deg,#fff 0%,#f4f8fc 100%)}
+.calculator-intro{padding-top:25px}
+.calculator-card{border:0;box-shadow:0 20px 50px rgba(7,53,99,.12);background:#fff}
+.calculator-card>.button{box-shadow:0 8px 18px rgba(239,125,34,.2)}
+.about-section .two-column{align-items:center}
+.about-section .prose{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 14px 35px rgba(23,32,51,.06)}
+.locations-section .info-card,.guides-section .guide-card{transition:transform .2s ease,box-shadow .2s ease}
+.locations-section .info-card:hover,.guides-section .guide-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(23,32,51,.1)}
+.locations-section .info-card h3{color:var(--blue);font-size:1.25rem}
+.guides-section .guide-card h3{color:var(--blue)}
+.faq-section .faq-list{background:#fff;border:1px solid var(--line);border-radius:20px;padding:0 24px;box-shadow:0 12px 30px rgba(23,32,51,.05)}
+.contact-section{padding-top:80px;padding-bottom:80px}
+.contact-card{box-shadow:0 18px 45px rgba(0,0,0,.16)}
+@media(max-width:780px){
+ .hero{min-height:760px}
+ .hero-content{padding-top:54px}
+ .hero-actions .button{min-height:60px}
+ .benefits{margin-top:0}
+ .products-showcase .section-heading{margin-bottom:22px}
+ .products-showcase .section-heading .text-link{display:inline-block;margin-top:8px}
+ .product-slide{box-shadow:0 8px 24px rgba(23,32,51,.08)}
+ .calculator-intro{padding-top:0}
+ .calculator-card{padding:22px}
+ .about-section .prose{padding:22px;border-radius:18px}
+ .faq-section .faq-list{padding:0 16px;border-radius:16px}
+}
