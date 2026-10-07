@@ -89,3 +89,49 @@
  .about-section .prose{padding:22px;border-radius:18px}
  .faq-section .faq-list{padding:0 16px;border-radius:16px}
 }
+
+
+/* Featured catalogue experience */
+.products-showcase{padding-top:76px;padding-bottom:92px}
+.carousel-intro{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 14px}
+.carousel-kicker{display:inline-flex;align-items:center;gap:8px;color:var(--blue);font-size:.76rem;font-weight:900;text-transform:uppercase;letter-spacing:.12em}
+.carousel-kicker:before{content:"";width:24px;height:3px;border-radius:99px;background:var(--orange)}
+.carousel-hint{font-size:.78rem;color:var(--muted);font-weight:750}
+.product-slide{position:relative;display:flex;flex-direction:column;min-height:390px;border:0;border-radius:24px;background:#fff;box-shadow:0 14px 34px rgba(7,53,99,.10);overflow:hidden}
+.product-slide-image{position:relative;overflow:hidden;background:linear-gradient(145deg,#edf5fb,#fff);height:270px}
+.product-slide-image:after{content:"";position:absolute;inset:auto 0 0;height:35%;background:linear-gradient(transparent,rgba(7,31,57,.12));pointer-events:none}
+.product-slide img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;transition:transform .5s ease}
+.product-slide-info{display:flex;flex:1;flex-direction:column;padding:18px 19px 19px}
+.product-slide-info small{color:var(--orange-dark);font-size:.66rem;font-weight:900;letter-spacing:.13em;margin-bottom:5px}
+.product-slide-info strong{color:#123a67;font-size:1.14rem;line-height:1.2}
+.product-slide-info span{display:flex;align-items:center;gap:6px;margin-top:auto;padding-top:12px;color:var(--blue);font-size:.82rem;font-weight:850}
+.product-slide-info span b{font-size:1.05rem;transition:transform .2s ease}
+.product-slide:hover{transform:translateY(-7px);box-shadow:0 22px 44px rgba(7,53,99,.15)}
+.product-slide:hover img{transform:scale(1.045)}
+.product-slide:hover .product-slide-info span b{transform:translateX(4px)}
+.carousel-control{width:48px;height:48px;border:0;background:#fff;box-shadow:0 10px 25px rgba(7,53,99,.12);font-size:1.8rem;z-index:2}
+.carousel-control:disabled{opacity:.42;cursor:not-allowed}
+.carousel-control:not(:disabled):hover{background:var(--blue);color:#fff;transform:scale(1.05)}
+@media(max-width:780px){
+  .benefits{padding:18px 0 26px}
+  .benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr));border-radius:22px}
+  .benefit-card:nth-child(3){grid-column:1/-1;justify-content:center;border-top:1px solid #dfe5ec;border-left:0;min-height:88px}
+  .benefit-card:nth-child(3)>div{min-width:128px}
+  .products-showcase{padding-top:54px;padding-bottom:68px}
+  .products-showcase .section-heading{margin-bottom:18px}
+  .products-showcase h2{font-size:clamp(2rem,9vw,2.65rem);line-height:1.03}
+  .products-showcase .section-lead{font-size:.94rem;line-height:1.55;margin-top:10px}
+  .carousel-intro{margin-bottom:12px}
+  .carousel-hint{font-size:.72rem}
+  .carousel{display:block;position:relative}
+  .carousel-viewport{margin:0 -2px;padding:3px 2px 16px;overflow:hidden}
+  .carousel-track{gap:14px}
+  .product-slide{flex-basis:100%;min-height:360px;border-radius:22px;box-shadow:0 14px 34px rgba(7,53,99,.12)}
+  .product-slide-image{height:235px}
+  .product-slide-info{padding:17px 18px 18px}
+  .product-slide-info strong{font-size:1.12rem}
+  .carousel-control{position:absolute;top:99px;width:42px;height:42px;font-size:1.55rem}
+  .carousel-control.prev{left:10px}
+  .carousel-control.next{right:10px}
+  .carousel-control{background:rgba(255,255,255,.94);backdrop-filter:blur(8px)}
+}
