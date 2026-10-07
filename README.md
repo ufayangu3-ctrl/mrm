@@ -27,8 +27,8 @@ The current canonical examples use https://mabatirollingmillskenya.co.ke/. If a 
 
 ## Commercial hosting
 
-This version includes a browser shopping cart, localStorage persistence and a WhatsApp order-preparation workflow. **Do not deploy the commercial ordering version as GitHub Pages.** Use suitable commercial hosting such as Hostinger or another web host that is appropriate for the intended business use.
+The `commercial-hosting` branch contains the customer-facing catalogue build, including the browser cart and WhatsApp order-preparation workflow. This branch is intended for deployment on a hosting service that permits online-business websites.
 
-GitHub can remain the source-code repository. The WhatsApp workflow does not process payments and does not collect card numbers, CVV, M-Pesa PINs, bank passwords or account passwords.
+**Do not publish this branch with GitHub Pages.** GitHub's current Pages terms state that Pages is not intended or allowed to be used as free web hosting for an online business or e-commerce site. GitHub may remain the source-code repository while the customer-facing site is deployed on suitable commercial hosting.
 
-The ordering flow prepares a URL-encoded WhatsApp message to **+254 762 380 946** and tells the customer that MRM must confirm availability, final pricing and purchasing arrangements. It does not claim that an order or payment is confirmed.
+The ordering workflow does not process payments or collect card numbers, CVV, M-Pesa PINs, bank passwords or account passwords. It prepares a WhatsApp message for the supplied business contact and does not claim that an order or payment is confirmed.
